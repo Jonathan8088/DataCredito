@@ -1,11 +1,13 @@
 
 package udec.datacredito;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Jonathan
  */
-public class Record {
+public class Record implements Serializable{
     
     private int codigo;
     
@@ -14,6 +16,7 @@ public class Record {
     private boolean estado;
     
     private float valor;
+    
 
     public Record(int codigo, String empresa, boolean estado, float valor) {
         this.codigo = codigo;
@@ -53,7 +56,5 @@ public class Record {
     public void setValor(float valor) {
         this.valor = valor;
     }
-    
-    
-    
+
 }//Record

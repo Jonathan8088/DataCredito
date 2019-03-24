@@ -2,6 +2,8 @@
 package udec.datacredito;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -14,6 +16,8 @@ public class Persona implements Serializable{
     private String nombre;
     
     private String apellido;
+    
+    List<Record> recor = new ArrayList();
 
     public Persona(int id, String nombre, String apellido) {
         this.id = id;
@@ -43,6 +47,14 @@ public class Persona implements Serializable{
 
     public void setApellido(String apellido) {
         this.apellido = apellido;
+    }
+
+    public List<Record> getRecor() {
+        return recor;
+    }
+
+    public void setRecor(List<Record> recor) {
+        this.recor = recor;
     }
     
     
